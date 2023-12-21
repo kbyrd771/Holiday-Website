@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wish List Form</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body>
-    <form action="../data.txt" method="'POST">
-        <label for="name">What is your name?</label>
-        <input type="text" name="name" id="name" required>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="gallery"><i class="fas fa-image"></i>Gallery</a></li>
+                <li><a href="form"><i class="fas fa-address-card"></i>Form</a></li>
+            </ul>
+        </div>
+    </div>
 
-        <label for="wish list">Wish List:</label>
-        <input type="text" name="wish list" id="wish list" required>
-
-        <label for="comments">Additional Comments:</label>
-        <input type="text" name="comments" id="comments" required>
-
-        <input type="submit" value="Submit">
-    </form>
+    <div class="main_content">
+        <div class="header">Welcome to Kyle's Holiday Website!</div>
+        <div class="info">
+            <form action="/" method="POST">
+                <label for="name">What is your name?</label>
+                <input type="text" name="name" id="name" required>
+        
+                <label for="wish list">Wish List:</label>
+                <input type="text" name="wish list" id="wish list" required>
+        
+                <label for="comments">Additional Comments:</label>
+                <input type="text" name="comments" id="comments" required>
+        
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+      </div>
 </body>
 </html>
